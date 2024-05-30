@@ -15,8 +15,7 @@ const key = "deno-env:";
  * import { denoEnvPlugin } from "@miyauci/esbuild-deno-env";
  * import { build } from "esbuild";
  *
- * declare const ENDPOINT: string;
- * const env = { ENDPOINT };
+ * declare const env: { ENDPOINT: string };
  *
  * await build({
  *  stdin: {
