@@ -12,11 +12,11 @@ describe("createContents", () => {
   get(key) {
     return this.#env.get(key);
   }
-  delete(key) {
-    this.#env.delete(key);
-  }
   set(key, value) {
     this.#env.set(key, value);
+  }
+  delete(key) {
+    this.#env.delete(key);
   }
   has(key) {
     return this.#env.has(key);
@@ -41,11 +41,11 @@ export { env as "Deno.env" };
   get(key) {
     return this.#env.get(key);
   }
-  delete(key) {
-    this.#env.delete(key);
-  }
   set(key, value) {
     this.#env.set(key, value);
+  }
+  delete(key) {
+    this.#env.delete(key);
   }
   has(key) {
     return this.#env.has(key);

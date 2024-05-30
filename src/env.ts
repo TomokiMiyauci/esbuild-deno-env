@@ -9,12 +9,12 @@ export class DenoEnv implements Deno.Env {
     return this.#env.get(key);
   }
 
-  delete(key: string): void {
-    this.#env.delete(key);
-  }
-
   set(key: string, value: string): void {
     this.#env.set(key, value);
+  }
+
+  delete(key: string): void {
+    this.#env.delete(key);
   }
 
   has(key: string): boolean {
