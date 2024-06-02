@@ -1,6 +1,6 @@
 # esbuild-deno-env
 
-[![JSR](https://jsr.io/badges/@miyauci/format)](https://jsr.io/@miyauci/esbuild-deno-env)
+[![JSR](https://jsr.io/badges/@miyauci/esbuild-deno-env)](https://jsr.io/@miyauci/esbuild-deno-env)
 [![codecov](https://codecov.io/gh/TomokiMiyauci/esbuild-deno-env/graph/badge.svg?token=7gxIwWKnxy)](https://codecov.io/gh/TomokiMiyauci/esbuild-deno-env)
 [![GitHub](https://img.shields.io/github/license/TomokiMiyauci/esbuild-deno-env)](https://github.com/TomokiMiyauci/esbuild-deno-env/blob/main/LICENSE)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
