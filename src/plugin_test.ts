@@ -1,5 +1,5 @@
 import { createContents, denoEnvPlugin } from "./plugin.ts";
-import { describe, it } from "@std/testing/bdd";
+import { afterAll, describe, it } from "@std/testing/bdd";
 import { expect } from "@std/expect";
 import { build, stop } from "esbuild";
 
@@ -64,6 +64,9 @@ export { env as "Deno.env" };
 });
 
 describe("denoEnvPlugin", () => {
+  afterAll(async () => {
+    await stop();
+  });
   it("should inject Deno.env to bundle", async () => {
     const result = await build({
       stdin: {
@@ -76,8 +79,6 @@ describe("denoEnvPlugin", () => {
         denoEnvPlugin({ test: "test-value" }),
       ],
     });
-
-    await stop();
 
     expect(result.outputFiles[0].text).toBe(`// deno-env:deno-env:
 var DenoEnv = class {
@@ -121,8 +122,6 @@ env.get("test");
       ],
     });
 
-    await stop();
-
     expect(result.outputFiles[0].text).toBe(`// <stdin>
 console.log("test");
 `);
@@ -141,8 +140,6 @@ console.log("test");
         denoEnvPlugin({ test: "test2" }),
       ],
     });
-
-    await stop();
 
     expect(result.outputFiles[0].text).toBe(`// deno-env:deno-env:
 var DenoEnv = class {
