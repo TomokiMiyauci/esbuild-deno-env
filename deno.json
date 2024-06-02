@@ -1,7 +1,7 @@
 {
   "name": "@miyauci/esbuild-deno-env",
   "tasks": {
-    "test": "deno test --doc"
+    "test": "deno test --allow-read --allow-env --allow-run --doc"
   },
   "imports": {
     "@miyauci/esbuild-deno-env": "./src/mod.ts",
