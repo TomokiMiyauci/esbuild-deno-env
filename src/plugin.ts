@@ -19,7 +19,7 @@ const key = "deno-env:";
  *
  * await build({
  *  stdin: {
- *    contents: `console.log(Deno.env.get("ENDPOINT"));`,
+ *    contents: `Deno.env.get("ENDPOINT");`,
  *  },
  *  plugins: [denoEnvPlugin(env)],
  *  bundle: true,
@@ -31,8 +31,9 @@ export function denoEnvPlugin(values?: Record<string, string>): Plugin {
   return {
     name: "deno-env",
     setup(build) {
-      if (build.initialOptions.inject) build.initialOptions.inject.push(key);
-      else build.initialOptions.inject = [key];
+      const { initialOptions } = build;
+      if (initialOptions.inject) initialOptions.inject.push(key);
+      else initialOptions.inject = [key];
 
       const contents = createContents(values);
       const escapedKey = escape(key);

@@ -1,5 +1,11 @@
 # esbuild-deno-env
 
+[![JSR](https://jsr.io/badges/@miyauci/esbuild-deno-env)](https://jsr.io/@miyauci/esbuild-deno-env)
+[![codecov](https://codecov.io/gh/TomokiMiyauci/esbuild-deno-env/graph/badge.svg?token=7gxIwWKnxy)](https://codecov.io/gh/TomokiMiyauci/esbuild-deno-env)
+[![GitHub](https://img.shields.io/github/license/TomokiMiyauci/esbuild-deno-env)](https://github.com/TomokiMiyauci/esbuild-deno-env/blob/main/LICENSE)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
+
 An [esbuild](https://github.com/evanw/esbuild) plugin for
 [Deno.env](https://docs.deno.com/runtime/manual/basics/env_variables#built-in-denoenv).
 
@@ -27,8 +33,9 @@ npx jsr add @miyauci/esbuild-deno-env
 
 ## Usage
 
-The `denoEnvPlugin` adds a mock `Deno.env` to the bundle through esbuild
-`inject`.
+The `denoEnvPlugin` adds a mock
+[`Deno.env`](https://docs.deno.com/runtime/manual/basics/env_variables#built-in-denoenv)
+to the bundle through esbuild [`inject`](https://esbuild.github.io/api/#inject).
 
 It receives the initial values of the environment variables.
 
@@ -40,7 +47,7 @@ declare const env: { ENDPOINT: string };
 
 await build({
   stdin: {
-    contents: `console.log(Deno.env.get("ENDPOINT"));`,
+    contents: `Deno.env.get("ENDPOINT");`,
   },
   plugins: [denoEnvPlugin(env)],
   bundle: true,
