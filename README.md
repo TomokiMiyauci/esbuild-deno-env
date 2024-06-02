@@ -40,7 +40,7 @@ declare const env: { ENDPOINT: string };
 
 await build({
   stdin: {
-    contents: `console.log(Deno.env.get("ENDPOINT"));`,
+    contents: `Deno.env.get("ENDPOINT");`,
   },
   plugins: [denoEnvPlugin(env)],
   bundle: true,
