@@ -9,7 +9,7 @@
     "@std/expect": "jsr:@std/expect@^0.224.3",
     "@std/regexp": "jsr:@std/regexp@^0.224.1",
     "@std/testing": "jsr:@std/testing@^0.224.0",
-    "esbuild": "npm:esbuild@^0.22.0"
+    "esbuild": "npm:esbuild@^0.23.0"
   },
   "exports": "./src/mod.ts",
   "exclude": ["CHANGELOG.md"]
