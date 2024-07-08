@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/TomokiMiyauci/esbuild-deno-env/compare/1.1.0...1.2.0) (2024-07-08)
+
+
+### Features
+
+* update deps version ([cb15994](https://github.com/TomokiMiyauci/esbuild-deno-env/commit/cb1599495863d9bd8f1cf519cfdf1d8072196bbe))
+
 # [1.2.0-beta.1](https://github.com/TomokiMiyauci/esbuild-deno-env/compare/1.1.0...1.2.0-beta.1) (2024-07-08)
 
 
